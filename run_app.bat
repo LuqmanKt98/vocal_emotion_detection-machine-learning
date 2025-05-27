@@ -1,0 +1,13 @@
+@echo off
+echo Starting Vocal Emotion Detection App...
+
+echo Step 1: Starting FastAPI backend server...
+start cmd /k "cd backend && C:\Users\luqma\AppData\Local\Programs\Python\Python312\python.exe fastapi_server.py"
+
+echo Step 2: Waiting for backend to start...
+timeout /t 5 /nobreak
+
+echo Step 3: Starting Flutter app...
+call flutter run -d chrome
+
+echo All services started. Press Ctrl+C in each terminal to stop. 

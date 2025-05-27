@@ -1,0 +1,3 @@
+@echo off
+echo Starting FastAPI Emotion Detection Server...
+python fastapi_server.py 
